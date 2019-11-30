@@ -1,0 +1,1645 @@
+{
+ "cells": [
+  {
+   "cell_type": "code",
+   "execution_count": 5,
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "['__add__',\n",
+       " '__class__',\n",
+       " '__contains__',\n",
+       " '__delattr__',\n",
+       " '__dir__',\n",
+       " '__doc__',\n",
+       " '__eq__',\n",
+       " '__format__',\n",
+       " '__ge__',\n",
+       " '__getattribute__',\n",
+       " '__getitem__',\n",
+       " '__getnewargs__',\n",
+       " '__gt__',\n",
+       " '__hash__',\n",
+       " '__init__',\n",
+       " '__init_subclass__',\n",
+       " '__iter__',\n",
+       " '__le__',\n",
+       " '__len__',\n",
+       " '__lt__',\n",
+       " '__mod__',\n",
+       " '__mul__',\n",
+       " '__ne__',\n",
+       " '__new__',\n",
+       " '__reduce__',\n",
+       " '__reduce_ex__',\n",
+       " '__repr__',\n",
+       " '__rmod__',\n",
+       " '__rmul__',\n",
+       " '__setattr__',\n",
+       " '__sizeof__',\n",
+       " '__str__',\n",
+       " '__subclasshook__',\n",
+       " 'capitalize',\n",
+       " 'casefold',\n",
+       " 'center',\n",
+       " 'count',\n",
+       " 'encode',\n",
+       " 'endswith',\n",
+       " 'expandtabs',\n",
+       " 'find',\n",
+       " 'format',\n",
+       " 'format_map',\n",
+       " 'index',\n",
+       " 'isalnum',\n",
+       " 'isalpha',\n",
+       " 'isascii',\n",
+       " 'isdecimal',\n",
+       " 'isdigit',\n",
+       " 'isidentifier',\n",
+       " 'islower',\n",
+       " 'isnumeric',\n",
+       " 'isprintable',\n",
+       " 'isspace',\n",
+       " 'istitle',\n",
+       " 'isupper',\n",
+       " 'join',\n",
+       " 'ljust',\n",
+       " 'lower',\n",
+       " 'lstrip',\n",
+       " 'maketrans',\n",
+       " 'partition',\n",
+       " 'replace',\n",
+       " 'rfind',\n",
+       " 'rindex',\n",
+       " 'rjust',\n",
+       " 'rpartition',\n",
+       " 'rsplit',\n",
+       " 'rstrip',\n",
+       " 'split',\n",
+       " 'splitlines',\n",
+       " 'startswith',\n",
+       " 'strip',\n",
+       " 'swapcase',\n",
+       " 'title',\n",
+       " 'translate',\n",
+       " 'upper',\n",
+       " 'zfill']"
+      ]
+     },
+     "execution_count": 5,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "a= \"a string\"\n",
+    "dir(a)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 8,
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "0000000000000000000000000000000000000000000000000000000shahrukh kayani\n"
+     ]
+    }
+   ],
+   "source": [
+    "name='Sana Saleem'\n",
+    "print(name.zfill(70)) #add zero ofter the total character of string with include space"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 9,
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "Sana Saleem\n"
+     ]
+    }
+   ],
+   "source": [
+    "name= 'Sana Saleem'\n",
+    "print(name.zfill(0))  #add zero ofter the total character of string with include space"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 10,
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "SANA SALEEM\n\n"
+     ]
+    }
+   ],
+   "source": [
+    "name='Sana Saleem'\n",
+    "print(name.upper()) #return the whole string in upper case"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 11,
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "Sana Saleem\n"
+     ]
+    }
+   ],
+   "source": [
+    "name='Sana Saleem'\n",
+    "print(name.title()) #convert the first character of every word in UPPER Case"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 12,
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "Help on class str in module builtins:\n",
+      "\n",
+      "class str(object)\n",
+      " |  str(object='') -> str\n",
+      " |  str(bytes_or_buffer[, encoding[, errors]]) -> str\n",
+      " |  \n",
+      " |  Create a new string object from the given object. If encoding or\n",
+      " |  errors is specified, then the object must expose a data buffer\n",
+      " |  that will be decoded using the given encoding and error handler.\n",
+      " |  Otherwise, returns the result of object.__str__() (if defined)\n",
+      " |  or repr(object).\n",
+      " |  encoding defaults to sys.getdefaultencoding().\n",
+      " |  errors defaults to 'strict'.\n",
+      " |  \n",
+      " |  Methods defined here:\n",
+      " |  \n",
+      " |  __add__(self, value, /)\n",
+      " |      Return self+value.\n",
+      " |  \n",
+      " |  __contains__(self, key, /)\n",
+      " |      Return key in self.\n",
+      " |  \n",
+      " |  __eq__(self, value, /)\n",
+      " |      Return self==value.\n",
+      " |  \n",
+      " |  __format__(self, format_spec, /)\n",
+      " |      Return a formatted version of the string as described by format_spec.\n",
+      " |  \n",
+      " |  __ge__(self, value, /)\n",
+      " |      Return self>=value.\n",
+      " |  \n",
+      " |  __getattribute__(self, name, /)\n",
+      " |      Return getattr(self, name).\n",
+      " |  \n",
+      " |  __getitem__(self, key, /)\n",
+      " |      Return self[key].\n",
+      " |  \n",
+      " |  __getnewargs__(...)\n",
+      " |  \n",
+      " |  __gt__(self, value, /)\n",
+      " |      Return self>value.\n",
+      " |  \n",
+      " |  __hash__(self, /)\n",
+      " |      Return hash(self).\n",
+      " |  \n",
+      " |  __iter__(self, /)\n",
+      " |      Implement iter(self).\n",
+      " |  \n",
+      " |  __le__(self, value, /)\n",
+      " |      Return self<=value.\n",
+      " |  \n",
+      " |  __len__(self, /)\n",
+      " |      Return len(self).\n",
+      " |  \n",
+      " |  __lt__(self, value, /)\n",
+      " |      Return self<value.\n",
+      " |  \n",
+      " |  __mod__(self, value, /)\n",
+      " |      Return self%value.\n",
+      " |  \n",
+      " |  __mul__(self, value, /)\n",
+      " |      Return self*value.\n",
+      " |  \n",
+      " |  __ne__(self, value, /)\n",
+      " |      Return self!=value.\n",
+      " |  \n",
+      " |  __repr__(self, /)\n",
+      " |      Return repr(self).\n",
+      " |  \n",
+      " |  __rmod__(self, value, /)\n",
+      " |      Return value%self.\n",
+      " |  \n",
+      " |  __rmul__(self, value, /)\n",
+      " |      Return value*self.\n",
+      " |  \n",
+      " |  __sizeof__(self, /)\n",
+      " |      Return the size of the string in memory, in bytes.\n",
+      " |  \n",
+      " |  __str__(self, /)\n",
+      " |      Return str(self).\n",
+      " |  \n",
+      " |  capitalize(self, /)\n",
+      " |      Return a capitalized version of the string.\n",
+      " |      \n",
+      " |      More specifically, make the first character have upper case and the rest lower\n",
+      " |      case.\n",
+      " |  \n",
+      " |  casefold(self, /)\n",
+      " |      Return a version of the string suitable for caseless comparisons.\n",
+      " |  \n",
+      " |  center(self, width, fillchar=' ', /)\n",
+      " |      Return a centered string of length width.\n",
+      " |      \n",
+      " |      Padding is done using the specified fill character (default is a space).\n",
+      " |  \n",
+      " |  count(...)\n",
+      " |      S.count(sub[, start[, end]]) -> int\n",
+      " |      \n",
+      " |      Return the number of non-overlapping occurrences of substring sub in\n",
+      " |      string S[start:end].  Optional arguments start and end are\n",
+      " |      interpreted as in slice notation.\n",
+      " |  \n",
+      " |  encode(self, /, encoding='utf-8', errors='strict')\n",
+      " |      Encode the string using the codec registered for encoding.\n",
+      " |      \n",
+      " |      encoding\n",
+      " |        The encoding in which to encode the string.\n",
+      " |      errors\n",
+      " |        The error handling scheme to use for encoding errors.\n",
+      " |        The default is 'strict' meaning that encoding errors raise a\n",
+      " |        UnicodeEncodeError.  Other possible values are 'ignore', 'replace' and\n",
+      " |        'xmlcharrefreplace' as well as any other name registered with\n",
+      " |        codecs.register_error that can handle UnicodeEncodeErrors.\n",
+      " |  \n",
+      " |  endswith(...)\n",
+      " |      S.endswith(suffix[, start[, end]]) -> bool\n",
+      " |      \n",
+      " |      Return True if S ends with the specified suffix, False otherwise.\n",
+      " |      With optional start, test S beginning at that position.\n",
+      " |      With optional end, stop comparing S at that position.\n",
+      " |      suffix can also be a tuple of strings to try.\n",
+      " |  \n",
+      " |  expandtabs(self, /, tabsize=8)\n",
+      " |      Return a copy where all tab characters are expanded using spaces.\n",
+      " |      \n",
+      " |      If tabsize is not given, a tab size of 8 characters is assumed.\n",
+      " |  \n",
+      " |  find(...)\n",
+      " |      S.find(sub[, start[, end]]) -> int\n",
+      " |      \n",
+      " |      Return the lowest index in S where substring sub is found,\n",
+      " |      such that sub is contained within S[start:end].  Optional\n",
+      " |      arguments start and end are interpreted as in slice notation.\n",
+      " |      \n",
+      " |      Return -1 on failure.\n",
+      " |  \n",
+      " |  format(...)\n",
+      " |      S.format(*args, **kwargs) -> str\n",
+      " |      \n",
+      " |      Return a formatted version of S, using substitutions from args and kwargs.\n",
+      " |      The substitutions are identified by braces ('{' and '}').\n",
+      " |  \n",
+      " |  format_map(...)\n",
+      " |      S.format_map(mapping) -> str\n",
+      " |      \n",
+      " |      Return a formatted version of S, using substitutions from mapping.\n",
+      " |      The substitutions are identified by braces ('{' and '}').\n",
+      " |  \n",
+      " |  index(...)\n",
+      " |      S.index(sub[, start[, end]]) -> int\n",
+      " |      \n",
+      " |      Return the lowest index in S where substring sub is found, \n",
+      " |      such that sub is contained within S[start:end].  Optional\n",
+      " |      arguments start and end are interpreted as in slice notation.\n",
+      " |      \n",
+      " |      Raises ValueError when the substring is not found.\n",
+      " |  \n",
+      " |  isalnum(self, /)\n",
+      " |      Return True if the string is an alpha-numeric string, False otherwise.\n",
+      " |      \n",
+      " |      A string is alpha-numeric if all characters in the string are alpha-numeric and\n",
+      " |      there is at least one character in the string.\n",
+      " |  \n",
+      " |  isalpha(self, /)\n",
+      " |      Return True if the string is an alphabetic string, False otherwise.\n",
+      " |      \n",
+      " |      A string is alphabetic if all characters in the string are alphabetic and there\n",
+      " |      is at least one character in the string.\n",
+      " |  \n",
+      " |  isascii(self, /)\n",
+      " |      Return True if all characters in the string are ASCII, False otherwise.\n",
+      " |      \n",
+      " |      ASCII characters have code points in the range U+0000-U+007F.\n",
+      " |      Empty string is ASCII too.\n",
+      " |  \n",
+      " |  isdecimal(self, /)\n",
+      " |      Return True if the string is a decimal string, False otherwise.\n",
+      " |      \n",
+      " |      A string is a decimal string if all characters in the string are decimal and\n",
+      " |      there is at least one character in the string.\n",
+      " |  \n",
+      " |  isdigit(self, /)\n",
+      " |      Return True if the string is a digit string, False otherwise.\n",
+      " |      \n",
+      " |      A string is a digit string if all characters in the string are digits and there\n",
+      " |      is at least one character in the string.\n",
+      " |  \n",
+      " |  isidentifier(self, /)\n",
+      " |      Return True if the string is a valid Python identifier, False otherwise.\n",
+      " |      \n",
+      " |      Use keyword.iskeyword() to test for reserved identifiers such as \"def\" and\n",
+      " |      \"class\".\n",
+      " |  \n",
+      " |  islower(self, /)\n",
+      " |      Return True if the string is a lowercase string, False otherwise.\n",
+      " |      \n",
+      " |      A string is lowercase if all cased characters in the string are lowercase and\n",
+      " |      there is at least one cased character in the string.\n",
+      " |  \n",
+      " |  isnumeric(self, /)\n",
+      " |      Return True if the string is a numeric string, False otherwise.\n",
+      " |      \n",
+      " |      A string is numeric if all characters in the string are numeric and there is at\n",
+      " |      least one character in the string.\n",
+      " |  \n",
+      " |  isprintable(self, /)\n",
+      " |      Return True if the string is printable, False otherwise.\n",
+      " |      \n",
+      " |      A string is printable if all of its characters are considered printable in\n",
+      " |      repr() or if it is empty.\n",
+      " |  \n",
+      " |  isspace(self, /)\n",
+      " |      Return True if the string is a whitespace string, False otherwise.\n",
+      " |      \n",
+      " |      A string is whitespace if all characters in the string are whitespace and there\n",
+      " |      is at least one character in the string.\n",
+      " |  \n",
+      " |  istitle(self, /)\n",
+      " |      Return True if the string is a title-cased string, False otherwise.\n",
+      " |      \n",
+      " |      In a title-cased string, upper- and title-case characters may only\n",
+      " |      follow uncased characters and lowercase characters only cased ones.\n",
+      " |  \n",
+      " |  isupper(self, /)\n",
+      " |      Return True if the string is an uppercase string, False otherwise.\n",
+      " |      \n",
+      " |      A string is uppercase if all cased characters in the string are uppercase and\n",
+      " |      there is at least one cased character in the string.\n",
+      " |  \n",
+      " |  join(self, iterable, /)\n",
+      " |      Concatenate any number of strings.\n",
+      " |      \n",
+      " |      The string whose method is called is inserted in between each given string.\n",
+      " |      The result is returned as a new string.\n",
+      " |      \n",
+      " |      Example: '.'.join(['ab', 'pq', 'rs']) -> 'ab.pq.rs'\n",
+      " |  \n",
+      " |  ljust(self, width, fillchar=' ', /)\n",
+      " |      Return a left-justified string of length width.\n",
+      " |      \n",
+      " |      Padding is done using the specified fill character (default is a space).\n",
+      " |  \n",
+      " |  lower(self, /)\n",
+      " |      Return a copy of the string converted to lowercase.\n",
+      " |  \n",
+      " |  lstrip(self, chars=None, /)\n",
+      " |      Return a copy of the string with leading whitespace removed.\n",
+      " |      \n",
+      " |      If chars is given and not None, remove characters in chars instead.\n",
+      " |  \n",
+      " |  partition(self, sep, /)\n",
+      " |      Partition the string into three parts using the given separator.\n",
+      " |      \n",
+      " |      This will search for the separator in the string.  If the separator is found,\n",
+      " |      returns a 3-tuple containing the part before the separator, the separator\n",
+      " |      itself, and the part after it.\n",
+      " |      \n",
+      " |      If the separator is not found, returns a 3-tuple containing the original string\n",
+      " |      and two empty strings.\n",
+      " |  \n",
+      " |  replace(self, old, new, count=-1, /)\n",
+      " |      Return a copy with all occurrences of substring old replaced by new.\n",
+      " |      \n",
+      " |        count\n",
+      " |          Maximum number of occurrences to replace.\n",
+      " |          -1 (the default value) means replace all occurrences.\n",
+      " |      \n",
+      " |      If the optional argument count is given, only the first count occurrences are\n",
+      " |      replaced.\n",
+      " |  \n",
+      " |  rfind(...)\n",
+      " |      S.rfind(sub[, start[, end]]) -> int\n",
+      " |      \n",
+      " |      Return the highest index in S where substring sub is found,\n",
+      " |      such that sub is contained within S[start:end].  Optional\n",
+      " |      arguments start and end are interpreted as in slice notation.\n",
+      " |      \n",
+      " |      Return -1 on failure.\n",
+      " |  \n",
+      " |  rindex(...)\n",
+      " |      S.rindex(sub[, start[, end]]) -> int\n",
+      " |      \n",
+      " |      Return the highest index in S where substring sub is found,\n",
+      " |      such that sub is contained within S[start:end].  Optional\n",
+      " |      arguments start and end are interpreted as in slice notation.\n",
+      " |      \n",
+      " |      Raises ValueError when the substring is not found.\n",
+      " |  \n",
+      " |  rjust(self, width, fillchar=' ', /)\n",
+      " |      Return a right-justified string of length width.\n",
+      " |      \n",
+      " |      Padding is done using the specified fill character (default is a space).\n",
+      " |  \n",
+      " |  rpartition(self, sep, /)\n",
+      " |      Partition the string into three parts using the given separator.\n",
+      " |      \n",
+      " |      This will search for the separator in the string, starting at the end. If\n",
+      " |      the separator is found, returns a 3-tuple containing the part before the\n",
+      " |      separator, the separator itself, and the part after it.\n",
+      " |      \n",
+      " |      If the separator is not found, returns a 3-tuple containing two empty strings\n",
+      " |      and the original string.\n",
+      " |  \n",
+      " |  rsplit(self, /, sep=None, maxsplit=-1)\n",
+      " |      Return a list of the words in the string, using sep as the delimiter string.\n",
+      " |      \n",
+      " |        sep\n",
+      " |          The delimiter according which to split the string.\n",
+      " |          None (the default value) means split according to any whitespace,\n",
+      " |          and discard empty strings from the result.\n",
+      " |        maxsplit\n",
+      " |          Maximum number of splits to do.\n",
+      " |          -1 (the default value) means no limit.\n",
+      " |      \n",
+      " |      Splits are done starting at the end of the string and working to the front.\n",
+      " |  \n",
+      " |  rstrip(self, chars=None, /)\n",
+      " |      Return a copy of the string with trailing whitespace removed.\n",
+      " |      \n",
+      " |      If chars is given and not None, remove characters in chars instead.\n",
+      " |  \n",
+      " |  split(self, /, sep=None, maxsplit=-1)\n",
+      " |      Return a list of the words in the string, using sep as the delimiter string.\n",
+      " |      \n",
+      " |      sep\n",
+      " |        The delimiter according which to split the string.\n",
+      " |        None (the default value) means split according to any whitespace,\n",
+      " |        and discard empty strings from the result.\n",
+      " |      maxsplit\n",
+      " |        Maximum number of splits to do.\n",
+      " |        -1 (the default value) means no limit.\n",
+      " |  \n",
+      " |  splitlines(self, /, keepends=False)\n",
+      " |      Return a list of the lines in the string, breaking at line boundaries.\n",
+      " |      \n",
+      " |      Line breaks are not included in the resulting list unless keepends is given and\n",
+      " |      true.\n",
+      " |  \n",
+      " |  startswith(...)\n",
+      " |      S.startswith(prefix[, start[, end]]) -> bool\n",
+      " |      \n",
+      " |      Return True if S starts with the specified prefix, False otherwise.\n",
+      " |      With optional start, test S beginning at that position.\n",
+      " |      With optional end, stop comparing S at that position.\n",
+      " |      prefix can also be a tuple of strings to try.\n",
+      " |  \n",
+      " |  strip(self, chars=None, /)\n",
+      " |      Return a copy of the string with leading and trailing whitespace remove.\n",
+      " |      \n",
+      " |      If chars is given and not None, remove characters in chars instead.\n",
+      " |  \n",
+      " |  swapcase(self, /)\n",
+      " |      Convert uppercase characters to lowercase and lowercase characters to uppercase.\n",
+      " |  \n",
+      " |  title(self, /)\n",
+      " |      Return a version of the string where each word is titlecased.\n",
+      " |      \n",
+      " |      More specifically, words start with uppercased characters and all remaining\n",
+      " |      cased characters have lower case.\n",
+      " |  \n",
+      " |  translate(self, table, /)\n",
+      " |      Replace each character in the string using the given translation table.\n",
+      " |      \n",
+      " |        table\n",
+      " |          Translation table, which must be a mapping of Unicode ordinals to\n",
+      " |          Unicode ordinals, strings, or None.\n",
+      " |      \n",
+      " |      The table must implement lookup/indexing via __getitem__, for instance a\n",
+      " |      dictionary or list.  If this operation raises LookupError, the character is\n",
+      " |      left untouched.  Characters mapped to None are deleted.\n",
+      " |  \n",
+      " |  upper(self, /)\n",
+      " |      Return a copy of the string converted to uppercase.\n",
+      " |  \n",
+      " |  zfill(self, width, /)\n",
+      " |      Pad a numeric string with zeros on the left, to fill a field of the given width.\n",
+      " |      \n",
+      " |      The string is never truncated.\n",
+      " |  \n",
+      " |  ----------------------------------------------------------------------\n",
+      " |  Static methods defined here:\n",
+      " |  \n",
+      " |  __new__(*args, **kwargs) from builtins.type\n",
+      " |      Create and return a new object.  See help(type) for accurate signature.\n",
+      " |  \n",
+      " |  maketrans(x, y=None, z=None, /)\n",
+      " |      Return a translation table usable for str.translate().\n",
+      " |      \n",
+      " |      If there is only one argument, it must be a dictionary mapping Unicode\n",
+      " |      ordinals (integers) or characters to Unicode ordinals, strings or None.\n",
+      " |      Character keys will be then converted to ordinals.\n",
+      " |      If there are two arguments, they must be strings of equal length, and\n",
+      " |      in the resulting dictionary, each character in x will be mapped to the\n",
+      " |      character at the same position in y. If there is a third argument, it\n",
+      " |      must be a string, whose characters will be mapped to None in the result.\n",
+      "\n"
+     ]
+    }
+   ],
+   "source": [
+    "help(str)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 13,
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "{97: '99', 98: '22'}"
+      ]
+     },
+     "execution_count": 13,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "string= 'abcd'\n",
+    "paper1= {\"a\":\"99\",\"b\":\"22\"}\n",
+    "t= string.maketrans(paper1)\n",
+    "t"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 14,
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "97"
+      ]
+     },
+     "execution_count": 14,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "ord(\"a\")"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 15,
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "{97: '1', 98: '2', 99: '3', 100: '4'}"
+      ]
+     },
+     "execution_count": 15,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "string= \"hello pakistan\"\n",
+    "paper1= {\"a\":\"1\",\"b\":\"2\",\"c\":\"3\",\"d\":\"4\"}\n",
+    "table= string.maketrans(paper1)\n",
+    "table"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 17,
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "'a'"
+      ]
+     },
+     "execution_count": 17,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "chr(97)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 20,
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "{97: 49, 98: 50, 99: 51, 100: 52, 101: 53}"
+      ]
+     },
+     "execution_count": 20,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "string=\"hello pakistan\"\n",
+    "paper1=\"abcde\"\n",
+    "paper2=\"12345\"\n",
+    "t= string.maketrans(paper1,paper2)\n",
+    "t"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 21,
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "'d'"
+      ]
+     },
+     "execution_count": 21,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "chr(100)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 22,
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "{97: 49, 98: 50, 99: 51, 100: 52, 101: 53, 120: None, 121: None, 122: None}"
+      ]
+     },
+     "execution_count": 22,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "string=\"hello pakistan\"\n",
+    "paper1=\"abcde\"\n",
+    "paper2=\"12345\"\n",
+    "paper3=\"xyz\"\n",
+    "t=string.maketrans(paper1,paper2,paper3)\n",
+    "t"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 23,
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "'h5llo p1kist1n'"
+      ]
+     },
+     "execution_count": 23,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "string.translate(t)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 24,
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "sHAHRUKH KAYANI\n"
+     ]
+    }
+   ],
+   "source": [
+    "name='Shahrukh kayani'\n",
+    "print(name.swapcase())  #return first character of every work in lower and other whole string will be UPPER case"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 25,
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "Shahrukh kayani\n"
+     ]
+    }
+   ],
+   "source": [
+    "name='Shahrukh kayani'\n",
+    "print(name.strip())"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 26,
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "True\n",
+      "True\n"
+     ]
+    }
+   ],
+   "source": [
+    "name='Shahrukh Kayani'\n",
+    "print(name.startswith('S'))\n",
+    "name='Shahryaar KAhan'\n",
+    "print(name.startswith('S')) #return true or false if the given character are starting character of whole string"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 27,
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "True\n",
+      "False\n"
+     ]
+    }
+   ],
+   "source": [
+    "name='Shahrukh Kayani'\n",
+    "print(name.startswith('S'))\n",
+    "name='Shahryaar KAhan'\n",
+    "print(name.startswith('R')) #return true or false if the given character are starting character of whole string"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 28,
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "False\n",
+      "True\n"
+     ]
+    }
+   ],
+   "source": [
+    "name='Shahrukh Kayani'\n",
+    "print(name.startswith('R'))\n",
+    "name='Shahryaar KAhan'\n",
+    "print(name.startswith('S')) #return true or false if the given character are starting character of whole string"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 29,
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "['Shahrukh kayani']\n"
+     ]
+    }
+   ],
+   "source": [
+    "name='Shahrukh kayani'\n",
+    "print(name.splitlines()) #return a single work list"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 31,
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "['Shahrukh', 'Kayani']\n"
+     ]
+    }
+   ],
+   "source": [
+    "name='Shahrukh Kayani'\n",
+    "print(name.split())"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 32,
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "Shahrukh kayani\n"
+     ]
+    }
+   ],
+   "source": [
+    "name='Shahrukh kayani'\n",
+    "print(name.rstrip())"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 35,
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "['Shahrukh', 'Kayani']\n"
+     ]
+    }
+   ],
+   "source": [
+    "name='Shahrukh Kayani'\n",
+    "print(name.rsplit()) #return in list\n"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 36,
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "('Shahrukh ', 'Kayani', '')\n"
+     ]
+    }
+   ],
+   "source": [
+    "name='Shahrukh Kayani'\n",
+    "print(name.rpartition('Kayani'))"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 37,
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "                                   Shahrukh Kayani\n"
+     ]
+    }
+   ],
+   "source": [
+    "name='Shahrukh Kayani'\n",
+    "print(name.rjust(50)) #return a justified version of string"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 38,
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "14\n"
+     ]
+    }
+   ],
+   "source": [
+    "name='Shahrukh Kayani'\n",
+    "print(name.rindex('i')) #return the index almost rindex(),if value not found return error"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 39,
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "-1\n"
+     ]
+    }
+   ],
+   "source": [
+    "name='Shahukh Kayani'\n",
+    "print(name.rfind('c')) #return the index almost rindex(),if value not found return -1"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 40,
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "Ruhe kayani\n"
+     ]
+    }
+   ],
+   "source": [
+    "name='Shahrukh kayani'\n",
+    "print(name.replace('Shahrukh','Ruhe'))  #replace the word to another word"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 41,
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "('Shahrukh Kayani', '', '')\n"
+     ]
+    }
+   ],
+   "source": [
+    "name='Shahrukh Kayani'\n",
+    "print(name.partition('Ruhe Kayani'))  #return a tuple"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 42,
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      " Shahrukh Kayani \n",
+      "Ruhe kayani   \n"
+     ]
+    }
+   ],
+   "source": [
+    "name=' Shahrukh Kayani '\n",
+    "print(name)\n",
+    "name=' Ruhe kayani   '\n",
+    "print(name.lstrip())   #remove space for letf side"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 43,
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "ruhe kayani\n"
+     ]
+    }
+   ],
+   "source": [
+    "name='Ruhe KAyani'\n",
+    "print(name.lower())  #return all character in lower case"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 45,
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "Kayani                    Ruhe Shahrukh\n"
+     ]
+    }
+   ],
+   "source": [
+    "name='Kayani '\n",
+    "name1=name.ljust(25)\n",
+    "print(name1,\"Ruhe Shahrukh\")  #return 20 character space from left justified"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 46,
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "Shahrukh  Kayani\n"
+     ]
+    }
+   ],
+   "source": [
+    "name={'Shahrukh','Kayani'}\n",
+    "print('  '.join(name)) #method takes all items in an iterable and joins them into one string.A string must be specified as the separator."
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 47,
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "False\n",
+      "True\n"
+     ]
+    }
+   ],
+   "source": [
+    "name='ruhe kayani'\n",
+    "print(name.isupper())\n",
+    "name='RUHE KAYANI'\n",
+    "print(name.isupper())  #return true or false if whole string will have upper case letter"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 48,
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "False\n"
+     ]
+    }
+   ],
+   "source": [
+    "name='RUHE KAYANI'\n",
+    "print(name.istitle()) #return true or false if each word start with an upper case letter"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 49,
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "False\n"
+     ]
+    }
+   ],
+   "source": [
+    "name='ruhe kayani'\n",
+    "print(name.istitle()) #return true or false if each word start with an upper case letter"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 50,
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "True\n"
+     ]
+    }
+   ],
+   "source": [
+    "name='Ruhe Kayani'\n",
+    "print(name.istitle()) #return true or false if each word start with an upper case letter"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 51,
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "False\n",
+      "True\n"
+     ]
+    }
+   ],
+   "source": [
+    "name='Shahrukh Kayani'\n",
+    "print(name.isspace())\n",
+    "name='  '\n",
+    "print(name.isspace())  #returns True if all the characters in a string are whitespaces, otherwise False"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 52,
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "False\n",
+      "False\n"
+     ]
+    }
+   ],
+   "source": [
+    "name='Shahrukh Kayani'\n",
+    "print(name.isspace())\n",
+    "name='Ruhe '\n",
+    "print(name.isspace())  #returns True if all the characters in a string are whitespaces, otherwise False"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 53,
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "True\n"
+     ]
+    }
+   ],
+   "source": [
+    "name='Ruhe Kayani'\n",
+    "print(name.isprintable()) #return true or false if string have all characters are printable"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 54,
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "False\n",
+      "True\n"
+     ]
+    }
+   ],
+   "source": [
+    "name='shahrukh Kayani'\n",
+    "print(name.isnumeric())\n",
+    "number='14'\n",
+    "print(number.isnumeric()) #return true or false if string have all characters are numeric"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 58,
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "False\n"
+     ]
+    }
+   ],
+   "source": [
+    "name='Ruhe kayani'\n",
+    "print(name.islower()) #return true or false if string have all characters are lower case'"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 59,
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "True\n"
+     ]
+    }
+   ],
+   "source": [
+    "name='ruhe kayani'\n",
+    "print(name.islower()) #return true or false if string have all characters are lower case'"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 60,
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "True\n"
+     ]
+    }
+   ],
+   "source": [
+    "name='Shahrukhkayani' \n",
+    "print(name.isidentifier()) #return true or false if string have some identifier like start with _,or no space between word"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 61,
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "False\n"
+     ]
+    }
+   ],
+   "source": [
+    "name='Ruhe kayani' \n",
+    "print(name.isdigit()) #return if string have any digits"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 62,
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "False\n"
+     ]
+    }
+   ],
+   "source": [
+    "name='Ruhe kayani' \n",
+    "print(name.isdecimal()) #return if string have any decimal value"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 63,
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "True\n"
+     ]
+    }
+   ],
+   "source": [
+    "name='Shahrukh kayani' \n",
+    "print(name.isascii())"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 64,
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "True\n"
+     ]
+    }
+   ],
+   "source": [
+    "name='RuheKayani' \n",
+    "print(name.isalpha()) #return true of false if string have all alphabets without space"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 65,
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "True\n"
+     ]
+    }
+   ],
+   "source": [
+    "name='Shahrukh009' \n",
+    "print(name.isalnum()) #return if string is alphanumeic or not e.g character and number"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 66,
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "0\n"
+     ]
+    }
+   ],
+   "source": [
+    "name='Ruhe kayani' \n",
+    "print(name.index('R'))  #return the index of specific character"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 67,
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "Habib Ruhe\n"
+     ]
+    }
+   ],
+   "source": [
+    "name={'fname':'Habib', 'lname':'Ruhe'}\n",
+    "print('{fname} {lname}'.format_map(name))"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 68,
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "My Name is Habib kayani Ruhe kayani\n"
+     ]
+    }
+   ],
+   "source": [
+    "name='My Name is {fname} {lname}'\n",
+    "print(name.format(fname='Habib kayani',lname='Ruhe kayani')) #Insert the fname and lname inside the placeholder{}, the fname and lname should be in fixed point"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 69,
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "-1\n"
+     ]
+    }
+   ],
+   "source": [
+    "name='Ruhe Kayani'\n",
+    "print(name.find('s')) #return the index of find character"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 73,
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "S\r",
+      "hahrukh kayani\n"
+     ]
+    }
+   ],
+   "source": [
+    "name ='S\\rhahrukh kayani'\n",
+    "print(name.expandtabs(2)) #space between the character"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 74,
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "False\n"
+     ]
+    }
+   ],
+   "source": [
+    "name='Ruhe kayani'\n",
+    "print(name.endswith('l')) #compare with end character of string and reture true or false"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 75,
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "b'Ruhe kahayani'\n"
+     ]
+    }
+   ],
+   "source": [
+    "name='Ruhe kahayani'\n",
+    "print(name.encode()) #encode the string"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 76,
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "1\n"
+     ]
+    }
+   ],
+   "source": [
+    "name='Ruhe kayani'\n",
+    "print(name.count('e')) #print total number of a character like 'a'"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 77,
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "    ruhe kayani     \n"
+     ]
+    }
+   ],
+   "source": [
+    "name='ruhe kayani'\n",
+    "print(name.center(20)) #taking space of 40 character and pring name in the middle"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 78,
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "ruhe kayani\n"
+     ]
+    }
+   ],
+   "source": [
+    "name ='Ruhe kayani'\n",
+    "print(name.casefold()) #lower all character of string"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 79,
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "Ruhe kayani\n",
+      "Ruhe kayani\n"
+     ]
+    }
+   ],
+   "source": [
+    "name ='Ruhe kayani'\n",
+    "print(name)\n",
+    "print(name.capitalize()) #Only capitalize 1 character of string"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {},
+   "outputs": [],
+   "source": []
+  }
+ ],
+ "metadata": {
+  "kernelspec": {
+   "display_name": "Python 3",
+   "language": "python",
+   "name": "python3"
+  },
+  "language_info": {
+   "codemirror_mode": {
+    "name": "ipython",
+    "version": 3
+   },
+   "file_extension": ".py",
+   "mimetype": "text/x-python",
+   "name": "python",
+   "nbconvert_exporter": "python",
+   "pygments_lexer": "ipython3",
+   "version": "3.7.3"
+  }
+ },
+ "nbformat": 4,
+ "nbformat_minor": 2
+}
